@@ -1,4 +1,4 @@
-SQL> create table spring_employee(eno number(10) primary key,ename varchar2(20),eadd varchar2(20),doj date,basicsalary number(10,2),grosssalary number(10,2),netsalary number(10,2));
+SQL> create table spring_employee(eno number(10) primary key,ename varchar2(20),eadd varchar2(20),designation varchar2(20),basicsalary number(10,2),grosssalary number(10,2),netsalary number(10,2));
 
 Table created.
 
@@ -8,12 +8,12 @@ SQL> desc spring_employee;
  ENO                                       NOT NULL NUMBER(10)
  ENAME                                              VARCHAR2(20)
  EADD                                               VARCHAR2(20)
- DOJ                                                DATE
+ DESIGNATION                                        VARCHAR2(20)
  BASICSALARY                                        NUMBER(10,2)
  GROSSSALARY                                        NUMBER(10,2)
  NETSALARY                                          NUMBER(10,2)
 
-SQL> create sequence eno_seq1 start with 1 increment by 1;
+SQL> create sequence eno_seq start with 1 increment by 1;
 
 Sequence created.
 

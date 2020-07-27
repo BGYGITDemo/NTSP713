@@ -3,7 +3,7 @@ package com.nt.vo;
 public class EmployeeVO {
 	private String ename;
 	private String eadd;
-	private String doj;
+	private String designation;
 	private String basicSalary;
 
 	public String getEname() {
@@ -22,12 +22,12 @@ public class EmployeeVO {
 		this.eadd = eadd;
 	}
 
-	public String getDoj() {
-		return doj;
+	public String getDesignation() {
+		return designation;
 	}
 
-	public void setDoj(String doj) {
-		this.doj = doj;
+	public void setDesignation(String designation) {
+		this.designation = designation;
 	}
 
 	public String getBasicSalary() {

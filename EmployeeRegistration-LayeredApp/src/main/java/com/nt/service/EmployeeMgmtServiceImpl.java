@@ -1,8 +1,5 @@
 package com.nt.service;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import com.nt.bo.EmployeeBO;
 import com.nt.dao.EmployeeDAO;
 import com.nt.dto.EmployeeDTO;
@@ -28,7 +25,7 @@ public final class EmployeeMgmtServiceImpl implements EmployeeMgmtService {
 	    bo=new EmployeeBO();
 	    bo.setEname(dto.getEname());
 	    bo.setEadd(dto.getEadd());
-	    bo.setDoj(dto.getDoj());
+	    bo.setDesignation(dto.getDesignation());
 	    bo.setBasicSalary(dto.getBasicSalary());
 	    bo.setGrossSalary(grossSalary);
 	     bo.setNetSalary(netSalary);
@@ -36,8 +33,8 @@ public final class EmployeeMgmtServiceImpl implements EmployeeMgmtService {
 	    count=dao.insert(bo);
 	    // process the result
 	    if(count==0)
-	    	  return "Employee Registration failed :: Amt::"+dto.getBasicSalary()+"  intrest::"+netSalary;
+	    	  return "Employee Registration failed :: BasicSalary:"+dto.getBasicSalary()+"  NetSalary::"+netSalary;
 	    else 
-	    	 return "Employee Registration Succeded :: Amt::"+dto.getBasicSalary()+"  intrest::"+netSalary;
+	    	 return "Employee Registration Succeded ::BasicSalary::"+dto.getBasicSalary()+"  NetSalary::"+netSalary;
 	}
 }

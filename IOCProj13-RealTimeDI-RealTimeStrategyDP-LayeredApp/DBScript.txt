@@ -1,0 +1,18 @@
+
+SQL> create table spring_customer(cno number(10) primary key,cname varchar2(20),cadd varchar2(20),pamt number(10,2),intramt number(10,2));
+
+Table created.
+
+SQL> create sequence cno_seq1 start with 1 increment by 1;
+
+Sequence created.
+
+
+SQL> desc spring_customer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CNO                                       NOT NULL NUMBER(10)
+ CNAME                                              VARCHAR2(20)
+ CADD                                               VARCHAR2(20)
+ PAMT                                               NUMBER(10,2)
+ INTRAMT                                            NUMBER(10,2)

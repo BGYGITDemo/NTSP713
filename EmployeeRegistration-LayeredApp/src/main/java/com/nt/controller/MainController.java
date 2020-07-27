@@ -1,7 +1,5 @@
 package com.nt.controller;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import com.nt.dto.EmployeeDTO;
 import com.nt.service.EmployeeMgmtService;
@@ -22,9 +20,7 @@ public  final class MainController {
 		dto=new EmployeeDTO();
 		dto.setEname(vo.getEname());
 		dto.setEadd(vo.getEadd());
-		
-		Date dt=new SimpleDateFormat("DD/MMM/YYYY").parse(vo.getDoj());
-		//dto.setDoj(dt);
+		dto.setDesignation(vo.getDesignation());
 		dto.setBasicSalary(Float.parseFloat(vo.getBasicSalary()));
 		//use service
 		result=service.registerEmployee(dto);

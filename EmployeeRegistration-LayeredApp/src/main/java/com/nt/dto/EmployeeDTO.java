@@ -6,7 +6,7 @@ import java.sql.Date;
 public class EmployeeDTO implements Serializable {
 	private String ename;
 	private String eadd;
-	private Date   doj;
+	private String designation;
 	private float basicSalary;
 	public String getEname() {
 		return ename;
@@ -20,11 +20,11 @@ public class EmployeeDTO implements Serializable {
 	public void setEadd(String eadd) {
 		this.eadd = eadd;
 	}
-	public Date getDoj() {
-		return doj;
+	public String getDesignation() {
+		return designation;
 	}
-	public void setDoj(Date dt) {
-		this.doj = dt;
+	public void setDesignation(String designation) {
+		this.designation = designation;
 	}
 	public float getBasicSalary() {
 		return basicSalary;

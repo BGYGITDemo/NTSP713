@@ -6,36 +6,37 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
 import com.nt.controller.MainController;
-import com.nt.vo.EmployeeVO;
+import com.nt.vo.CustomerVO;
 
 public class RealTimeDITest {
 
 	public static void main(String[] args) {
 		Scanner sc = null;
-		String ename = null, eadd = null, designation = null, basicSalary = null;
-		EmployeeVO vo = null;
+		String name = null, cadd = null, pamt = null, rate = null, time = null;
+		CustomerVO vo = null;
 		DefaultListableBeanFactory factory = null;
 		XmlBeanDefinitionReader reader = null;
 		MainController controller = null;
 		String result = null;
 		// read inputs
 		sc = new Scanner(System.in);
-		System.out.println("enter Employee name :: ");
-		ename = sc.next();
-		System.out.println("Enter Employee Addrs::");
-		eadd = sc.next();
-		System.out.println("Enter Employee Designation::");
-		designation = sc.next();
-		System.out.println("Enter Basic Salary::");
-		basicSalary = sc.next();
-	
+		System.out.println("enter Customername :: ");
+		name = sc.next();
+		System.out.println("Enter customer Addrs::");
+		cadd = sc.next();
+		System.out.println("Enter Principle  amount::");
+		pamt = sc.next();
+		System.out.println("Enter rate of intrest::");
+		rate = sc.next();
+		System.out.println("Enter time   ::");
+		time = sc.next();
 		// Store inputs in VO class object
-		vo = new EmployeeVO();
-		vo.setEname(ename);
-		vo.setEadd(eadd);
-		vo.setDesignation(designation);
-		vo.setBasicSalary(basicSalary);
-		
+		vo = new CustomerVO();
+		vo.setCname(name);
+		vo.setCadd(cadd);
+		vo.setpAmt(pamt);
+		vo.setRate(rate);
+		vo.setTime(time);
 		// create BEanFacory IOC container
 		factory = new DefaultListableBeanFactory();
 		reader = new XmlBeanDefinitionReader(factory);
@@ -44,7 +45,7 @@ public class RealTimeDITest {
 		controller = factory.getBean("controller", MainController.class);
 		// invoke the method
 		try {
-			result = controller.processStudent(vo);
+			result = controller.processCustomer(vo);
 			System.out.println(result);
 		} catch (Exception e) {
 			System.out.println("Internal Problem");
