@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-mainClassName="com.nt.test.RealtimeDITest"
+mainClassName="com.nt.test.RealTimeDITest"
 run{
    standardInput=System.in
 }
