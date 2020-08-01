@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="baseCar" class="com.nt.beans.Car" abstract="true">
+		<constructor-arg name="engineCC" value="1500" />
+		<constructor-arg name="model" value="swift" />
+		<constructor-arg name="company" value="suzuki" />
+		<constructor-arg name="fuelType" value="diesel" />
+		<constructor-arg name="owner" value="gobin" />
+		<constructor-arg name="type" value="hatchback" />
+	</bean>
+	<bean id="gobinCar1" class="com.nt.beans.Car" parent="baseCar">
+		<constructor-arg name="regNo" value="UP54E6945" />
+		<constructor-arg name="engineNo" value="12345" />
+		<constructor-arg name="color" value="red" />
+	</bean>
+	<bean id="gobinCar2" class="com.nt.beans.Car" parent="baseCar">
+		<constructor-arg name="regNo" value="UP50F6402" />
+		<constructor-arg name="engineNo" value="56789" />
+		<constructor-arg name="color" value="whtie" />
+		<constructor-arg name="owner" value="rani" />
+
+	</bean>
+</beans>

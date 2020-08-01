@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="dob" class="java.util.Date">
+		<property name="year" value="97" />
+		<property name="month" value="04" />
+		<property name="date" value="03" />
+	</bean>
+	<bean id="doj" class="java.util.Date">
+		<property name="year" value="119" />
+		<property name="month" value="07" />
+		<property name="date" value="21" />
+	</bean>
+	<bean id="dom" class="java.util.Date">
+		<property name="year" value="127" />
+		<property name="month" value="04" />
+		<property name="date" value="10" />
+	</bean>
+
+	<bean id="gobinInfo" class="com.nt.beans.PersonInfo">
+		<constructor-arg value="258485014849" />
+		<constructor-arg value="gobin" />
+		<constructor-arg ref="dob" />
+		<constructor-arg ref="doj" />
+		<constructor-arg ref="dom" />
+	</bean>
+	<bean id="amitInfo" class="com.nt.beans.PersonInfo">
+		<constructor-arg value="258485015051" />
+		<constructor-arg value="amit" />
+		<constructor-arg>
+			<null />
+		</constructor-arg>
+		<constructor-arg>
+			<null />
+		</constructor-arg>
+		<constructor-arg ref="doj" />
+
+	</bean>
+
+</beans>
